@@ -4,4 +4,5 @@ project(rayon)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(rayon main.cpp
-        vec3.h)
+        vec3.h
+        color.h)
