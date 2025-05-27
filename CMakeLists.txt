@@ -8,6 +8,9 @@ add_executable(rayon main.cpp
         color.h
         ray.h
         hittable.h
-        sphere.h)
+        sphere.h
+        hittable_list.h
+        rtweekend.h
+        interval.h)
 
 target_compile_options(rayon PRIVATE -Wall -Wextra -Wpedantic)

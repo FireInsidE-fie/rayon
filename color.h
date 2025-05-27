@@ -3,8 +3,6 @@
 
 # include "vec3.h"
 
-# include <iostream>
-
 // Alias to vec3 to enhance clarity when talking about a RGB color.
 using color = vec3;
 
