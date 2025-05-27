@@ -10,16 +10,16 @@ public:
 
 	bool hit(const ray& r, interval ray_t, hit_record& rec) const override
 	{
-		vec3 oc = center - r.origin();
-		auto a = r.direction().length_squared();
-		auto h = dot(r.direction(), oc);
-		auto c = oc.length_squared() - radius*radius;
+		const vec3 oc = center - r.origin();
+		const auto a = r.direction().length_squared();
+		const auto h = dot(r.direction(), oc);
+		const auto c = oc.length_squared() - radius*radius;
 
-		auto discriminant = h*h - a*c;
+		const auto discriminant = h*h - a*c;
 		if (discriminant < 0)
 			return false;
 
-		auto sqrtd = std::sqrt(discriminant);
+		const auto sqrtd = std::sqrt(discriminant);
 
 		// Find the nearest root that lies in the acceptable range.
 		auto root = (h - sqrtd) / a;
@@ -32,7 +32,7 @@ public:
 
 		rec.t = root;
 		rec.p = r.at(rec.t);
-		vec3 outward_normal = (rec.p - center) / radius;
+		const vec3 outward_normal = (rec.p - center) / radius;
 		rec.set_face_normal(r, outward_normal);
 
 		return true;

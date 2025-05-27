@@ -11,6 +11,7 @@ add_executable(rayon main.cpp
         sphere.h
         hittable_list.h
         rtweekend.h
-        interval.h)
+        interval.h
+        camera.h)
 
 target_compile_options(rayon PRIVATE -Wall -Wextra -Wpedantic)
